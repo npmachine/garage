@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_26_105542) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_26_112254) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,19 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_105542) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.bigint "author_id", null: false
+    t.string "title", default: "", null: false
+    t.text "body", default: "", null: false
+    t.string "state", default: "", null: false
+    t.string "slug", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["slug"], name: "index_posts_on_slug", unique: true
+    t.index ["title"], name: "index_posts_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +65,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_105542) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "posts", "users", column: "author_id"
 end
