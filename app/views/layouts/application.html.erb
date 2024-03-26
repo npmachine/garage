@@ -12,8 +12,16 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+    <main class="min-h-screen container mx-auto max-w-7xl px-6 lg:px-8 flex flex-col">
+      <div class="flex-none">
+        <%= render "layouts/header" %>
+      </div>
+      <div class="flex-1">
+        <%= yield %>
+      </div>
+      <div class="flex-none">
+        <%= render "layouts/footer" %>
+      </div>
     </main>
   </body>
 </html>
