@@ -2,15 +2,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
-  // content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   content: [
     "./public/*.html",
     "./app/helpers/**/*.rb",
     "./app/javascript/**/*.{ts,tsx,js,jsx}",
     "./app/views/**/*.{erb,haml,html,slim}",
   ],
-  prefix: "",
+  // darkMode: ["class"],
+  // prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,10 +19,10 @@ module.exports = {
       },
     },
     extend: {
-      // fontFamily: {
-      //   sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
-      //   // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      // },
+      fontFamily: {
+        // sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -40,7 +39,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    // require('@tailwindcss/typography'),
+  ],
   // plugins: [
   //   require('@tailwindcss/forms'),
   //   require('@tailwindcss/aspect-ratio'),

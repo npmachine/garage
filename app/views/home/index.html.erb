@@ -1,1 +1,4 @@
-<%= render ReactComponent.new("App") %>
+<%= render Home::IndexComponent.new(
+      posts: @posts,
+      navCollapsedSize: 4
+    ) %>
