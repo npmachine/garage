@@ -1,4 +1,3 @@
-<%# <header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10"> %>
 <header class="flex h-16 border-b border-gray-900/10">
   <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
     <div class="flex flex-1 items-center gap-x-6">
@@ -25,11 +24,23 @@
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
         </svg>
-      </button>
-      <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your profile</span>
-        <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-      </a> %>
+      </button> %>
+
+      <% if user_signed_in? %>
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your profile</span>
+          <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+        </a>
+        <%#= link_to "로그아웃", destroy_user_session_path, method: :delete,
+              class: "block px-4 py-2 text-sm text-gray-700", role: "menuitem",
+              tabindex: "-1" %>
+      <% else %>
+        <div class="flex flex-1 items-center justify-end gap-x-6">
+          <%= link_to "로그인", new_user_session_path,
+                class: "hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900" %>
+          <%= link_to "회원가입", new_user_registration_url, class: "rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
+        </div>
+      <% end %>
     </div>
   </div>
   <!-- Mobile menu, show/hide based on menu open state. -->
