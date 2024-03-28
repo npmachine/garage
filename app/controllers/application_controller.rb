@@ -2,7 +2,6 @@
 
 class ApplicationController < ActionController::Base
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
-  layout "layouts/full_body", if: :devise_controller?
 
   def decoded_param
     UrlEncoder.decode Array(params[:id].to_i)
