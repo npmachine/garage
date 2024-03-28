@@ -11,15 +11,15 @@
   </head>
 
   <body>
-    <main class="min-h-screen container mx-auto max-w-7xl px-6 lg:px-8 flex flex-col">
+    <main class="min-h-screen mx-auto flex flex-col">
       <div class="flex-none">
-        <%#= render "layouts/header" %>
+        <%= render "layouts/header" %>
       </div>
       <div class="flex-1">
-        <%= yield %>
+        <%= render "layouts/body" %>
       </div>
       <div class="flex-none">
-        <%#= render "layouts/footer" %>
+        <%= render "layouts/footer" %>
       </div>
     </main>
   </body>

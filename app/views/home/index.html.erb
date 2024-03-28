@@ -1,4 +1,30 @@
-<%= render Home::IndexComponent.new(
-      posts: @posts,
-      navCollapsedSize: 4
-    ) %>
+<div class="px-4 py-4 sm:px-6 lg:flex-auto lg:px-0 h-full w-full">
+  <div class="px-4 sm:px-6 lg:px-8">
+    <div class="sm:flex sm:items-center">
+      <div class="sm:flex-auto">
+        <h1 class="text-base font-semibold leading-6 text-gray-900">
+          새로운 소식
+        </h1>
+        <p class="mt-2 text-sm text-gray-700">
+          새로운 소식은 IT, 과학, 각종 기기에 관한 새로운 소식을 올리고 의견을 주고 받는 게시판입니다.
+        </p>
+      </div>
+      <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+        <button type="button" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update credit card</button>
+      </div>
+    </div>
+    <div class="-mx-4 mt-10 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg">
+      <table class="min-w-full divide-y divide-gray-300">
+        <tbody>
+          <%= render(
+                partial: "post",
+                collection: @posts
+              ) ||
+              render(partial: "shared/empty_list",
+                locals: { message: "No posts found"})
+          %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
