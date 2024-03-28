@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :posts, only: [:show]
+  resources :posts, except: [:delete]
 end

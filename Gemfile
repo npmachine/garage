@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 
 ### auth
 gem "devise", "~> 4.9"
+gem "any_login"
 gem "omniauth", "~> 2.1" # A generalized Rack framework for multiple-provider authentication
 # gem "omniauth-apple", "~> 1.0" # OmniAuth strategy for Sign In with Apple
 # gem "omniauth-facebook", "~> 9.0" # OmniAuth strategy for Facebook
@@ -62,6 +63,7 @@ gem "omniauth", "~> 2.1" # A generalized Rack framework for multiple-provider au
 ### model
 gem "annotate"
 gem "friendly_id"
+gem "sqids"
 
 ### view
 gem "view_component"
