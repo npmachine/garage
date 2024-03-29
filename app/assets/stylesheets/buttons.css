@@ -1,0 +1,77 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center font-medium border shadow-sm;
+  }
+
+  .btn-outline {
+    @apply border-gray-300 text-gray-700 bg-white hover:bg-gray-50;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+  }
+
+  .btn-primary {
+    @apply border-transparent text-white bg-primary-600 hover:bg-primary-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .btn-primary-outline {
+    @apply border-primary-300 text-primary-700 bg-white hover:bg-primary-50;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-secondary-600 hover:bg-secondary-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500;
+  }
+
+  .btn-secondary-outline {
+    @apply border-secondary-300 text-secondary-700 bg-white hover:bg-secondary-50;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500;
+  }
+
+  .btn-red {
+    @apply border-transparent text-white bg-red-600 hover:bg-red-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+  }
+
+  .btn-red-outline {
+    @apply border-red-600 text-red-700 bg-white hover:bg-red-50;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+  }
+
+  .btn-blue {
+    @apply border-transparent text-white bg-blue-600 hover:bg-blue-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  }
+
+  .btn-blue-outline {
+    @apply border-blue-600 text-blue-700 bg-white hover:bg-blue-50;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  }
+}
+
+@layer utilities {
+  .btn-xs {
+    @apply px-1 rounded text-sm;
+  }
+  .btn-sm {
+    @apply px-1.5 py-0.5 rounded text-sm;
+  }
+  .btn-md {
+    @apply px-2.5 py-1.5 rounded-md text-sm;
+  }
+  .btn-lg {
+    @apply px-4 py-2 rounded-md text-sm;
+  }
+  .btn-l-lg {
+    @apply px-4 py-2 rounded-l-md text-sm;
+  }
+  .btn-r-lg {
+    @apply px-4 py-2 rounded-r-md text-sm;
+  }
+  .btn-xl {
+    @apply px-4 py-2 rounded-md text-base;
+  }
+  .btn-2xl {
+    @apply px-6 py-3 rounded-md text-base;
+  }
+}
