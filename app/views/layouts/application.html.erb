@@ -14,6 +14,7 @@
     <main class="min-h-screen mx-auto flex flex-col">
       <div class="flex-none">
         <%= render "layouts/header" %>
+        <%= render partial: "shared/flash" %>
       </div>
       <div class="flex-1">
         <div class="max-w-7xl mx-auto lg:flex lg:gap-x-16 lg:px-8">
@@ -25,7 +26,6 @@
       </div>
       <div class="flex-none">
         <%= render "layouts/footer" %>
-        <%= render partial: "shared/flash" %>
       </div>
     </main>
   </body>
