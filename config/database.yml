@@ -79,6 +79,8 @@ test:
 #
 production:
   <<: *default
-  database: garage_production
-  username: garage
-  password: <%= ENV["GARAGE_DATABASE_PASSWORD"] %>
+  # database: garage_production
+  # username: garage
+  # password: <%= ENV["GARAGE_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  database: <%= ENV["DATABASE_NAME"] %>
