@@ -140,6 +140,8 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
+    heroicon (1.0.0)
+      rails (>= 5.2)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -383,6 +385,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   friendly_id
+  heroicon
   jbuilder
   jsbundling-rails
   omniauth (~> 2.1)

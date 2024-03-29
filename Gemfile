@@ -7,14 +7,12 @@ ruby "3.3.0"
 gem "rails", "~> 7.1.3"
 
 gem "cssbundling-rails"
-gem "hotwire-rails"
 gem "jsbundling-rails"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
-gem "view_component"
 gem "jbuilder"
 gem "redis", ">= 4.0.1"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -85,6 +83,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "heroicon"
 
 # gem "hashid-rails"
 # gem "inline_svg"
