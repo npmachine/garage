@@ -1,6 +1,6 @@
 <%# TODO: Better array handling %>
 <% if flash.any? %>
-  <div data-controller="flash1" class="inset-0 p-6 items-start justify-end">
+  <div data-controller="flash" class="inset-0 p-6 items-start justify-end">
     <div class="flex flex-col items-center justify-center">
       <% flash.each do |type, message| %>
         <% if message.is_a?(Array) %>
