@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   validates :body, presence: true
   validates :state, presence: true
 
-  enum :state, %i[draft unpublished published].index_with(&:to_s), default: :draft
+  enum :state, %i[draft unpublished published].index_with(&:to_s), default: :published
 
   # def encoded_id
   #   UrlEncoder.encode Array(id)
