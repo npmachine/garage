@@ -1,0 +1,9 @@
+{
+  "name": "garage",
+  "description": "An IT, tech, science news aggregator",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
