@@ -1,16 +1,14 @@
 <tr>
   <td class="relative py-4 pl-4 pr-3 text-sm sm:pl-6">
     <div class="font-medium text-gray-900 lg:hidden">
-      <%= post.author.username %>
+      <%= post.author.username.presence || post.author.email %>
     </div>
     <div class="mt-1 flex flex-col sm:block">
-      <span>
-        <%= post.title %>
-      </span>
+      <%= link_to post.title, post_path(post) %>
     </div>
   </td>
   <td class="hidden px-3 py-3.5 text-sm lg:table-cell">
-    <%= post.author.username %>
+    <%= post.author.username.presence || post.author.email %>
   </td>
 
   <%# <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">4 CPUs</td>
