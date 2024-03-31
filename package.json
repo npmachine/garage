@@ -20,6 +20,10 @@
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7"
   },
+  "engines": {
+    "node": "20.x",
+    "yarn": "1.22.21"
+  },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
     "build:css": "tailwindcss --postcss -c tailwind.config.js -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
